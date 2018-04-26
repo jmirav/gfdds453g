@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
-
+import { Link } from 'react-router';
 
 export class App extends Component {
   render() {
     return (
       <div>
         <nav>
-          {/*Aca deben ir los links de navegacion*/}
+          <ul>
+            <li><Link to="page1">Page 1</Link></li>
+            <li><Link to="page2">Page 2</Link></li>
+          </ul>
         </nav>
-        {/* Aca tienes que agreager algo para que las rutas funcionen*/}
+        {this.props.children}
       </div>
     )
   }
